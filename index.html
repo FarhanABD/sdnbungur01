@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Genius - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .custom-footer {
+        position: relative;
+        color: #fff;
+      }
+
+      .custom-footer .overlay {
+        background: rgba(0, 0, 0, 0.75);
+      }
+
+      .custom-footer a {
+        color: #ffffff;
+        transition: 0.3s;
+      }
+
+      .custom-footer a:hover {
+        color: #ffd700;
+        text-decoration: none;
+      }
+
+      .custom-footer .ftco-heading-2 {
+        color: #ffd700;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .custom-footer ul li {
+        margin-bottom: 12px;
+      }
+
+      .custom-footer .ftco-footer-social a {
+        font-size: 20px;
+      }
+      .parallax-map {
+        padding: 80px 0;
+        background: linear-gradient(90deg, #6a00ff, #f5d000);
+        min-height: 600px;
+      }
+
+      .map-card {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 15px;
+        border-radius: 20px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+      }
+
+      .map-card iframe {
+        border-radius: 15px;
+      }
+
+      .heading-section-white h2,
+      .heading-section-white p {
+        color: #fff;
+      }
+      .mading-card {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(255, 107, 213, 0.5);
+        margin: 10px;
+      }
+
+      .mading-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .mading-card:hover .mading-img {
+        transform: scale(1.05);
+      }
+
+      .mading-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 35px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1));
+        color: white;
+      }
+
+      .mading-date {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 6px 12px;
+        border-radius: 20px;
+      }
+
+      .mading-overlay h3 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .mading-overlay p {
+        font-size: 16px;
+        margin: 0;
+      }
+      .carousel-caption {
+        background: rgba(255, 107, 213, 0.5);
+        padding: 15px 20px;
+        border-radius: 10px;
+        bottom: 20px;
+      }
+      .info-box {
+        border-radius: 6px;
+      }
+
+      .box-title {
+        background: #001f8f;
+        color: white;
+        padding: 12px 18px;
+        display: inline-block;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+
+      .agenda-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #001f8f;
+        line-height: 1.4;
+      }
+
+      .announcement-item {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #001f8f;
+      }
+
+      table td {
+        padding: 15px;
+      }
+      .filter-btn {
+        border: none;
+        padding: 10px 22px;
+        margin: 5px;
+        border-radius: 25px;
+        background: #f5f5f5;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: #e676ec;
+        color: white;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        transition: 0.3s;
+      }
+
+      .gallery-item img:hover {
+        transform: scale(1.03);
+      }
+      .prestasi-card {
+        background: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        margin: 10px;
+      }
+
+      .prestasi-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .prestasi-img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+      }
+
+      .prestasi-content {
+        padding: 20px;
+      }
+
+      .prestasi-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #001f8f;
+        line-height: 1.4;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo-bungur.png" alt="Logo" style="height: 100px; width: 100px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">Profil</a></li>
+            <li class="nav-item"><a href="course.html" class="nav-link">Pengumuman</a></li>
+            <li class="nav-item"><a href="teacher.html" class="nav-link">Staff</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Prestasi</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap" style="background-image: url('images/bungur-pics/1.jpeg'); background-attachment: fixed">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 ftco-animate text-center">
+            <h1 class="mb-4">Selamat Datang Di Website Resmi SDN Bungur 01 Jakarta</h1>
+            <p><a href="contact.html" class="btn btn-secondary px-4 py-3">Hubungi Kami</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div id="imageSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <!-- Indicator titik bawah -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="2"></button>
+          </div>
+
+          <!-- Slide gambar -->
+          <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active">
+              <img src="images/bungur-pics/16.jpeg" class="d-block w-100" alt="Admission" style="height: 450px; object-fit: cover" />
+              <div class="carousel-caption">
+                <h3 style="color: white">Kegiatan Olahraga</h3>
+                <p style="font-size: 16px">Kegiatan olahraga SDN Bungur 01.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/bungur-pics/17.jpeg" class="d-block w-100" alt="Notice Board" style="height: 450px; object-fit: cover" />
+              <div class="carousel-caption">
+                <h3 style="color: white">Konser Kolaborasi SDN Bungur 01</h3>
+                <p style="font-size: 16px">Konser Kolaborasi SDN Bungur 01 dengan Purwacaraka Music Studio</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/bungur-pics/5.jpeg" class="d-block w-100" alt="Library" style="height: 450px; object-fit: cover" />
+              <div class="carousel-caption">
+                <h3 style="color: white">Kegiatan Belajar Mengajar</h3>
+                <p style="font-size: 16px">Kegiatan Belajar Mengajar dan Praktik Siswa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section-3 img" style="background-image: url(images/bungur-pics/22.jpeg)">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row d-md-flex justify-content-center">
+          <div class="col-md-9 about-video text-center">
+            <h2 class="ftco-animate">Membangun generasi cerdas, berkarakter, dan siap menghadapi masa depan</h2>
+            <div class="video d-flex justify-content-center">
+              <a href="https://vimeo.com/45830194" class="button popup-vimeo d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <section class="ftco-section bg-light py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Agenda -->
+          <div class="col-md-3">
+            <div class="info-box p-4 h-100 bg-white shadow-sm">
+              <h4 class="box-title">Agenda Terbaru</h4>
+
+              <h3 class="agenda-title">Asesmen Akhir Jenjang & Asesmen Tengah Semester Genap</h3>
+
+              <table class="table table-bordered mt-4">
+                <tr>
+                  <td>Hari</td>
+                  <td>Kamis</td>
+                </tr>
+                <tr>
+                  <td>Tanggal</td>
+                  <td>05 Maret 2026</td>
+                </tr>
+                <tr>
+                  <td>Jam</td>
+                  <td>07:30</td>
+                </tr>
+              </table>
+
+              <div class="text-end">
+                <a href="#">Lihat Semua</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Tengah -->
+          <div class="col-md-6">
+            <div id="newsSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner shadow-sm">
+                <div class="carousel-item active">
+                  <img src="images/course-1.jpg" class="d-block w-100" style="height: 560px; object-fit: cover" />
+                </div>
+
+                <div class="carousel-item">
+                  <img src="images/course-2.jpg" class="d-block w-100" style="height: 560px; object-fit: cover" />
+                </div>
+
+                <div class="carousel-item">
+                  <img src="images/course-3.jpg" class="d-block w-100" style="height: 560px; object-fit: cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pengumuman -->
+          <div class="col-md-3">
+            <div class="info-box p-4 h-100 bg-white shadow-sm">
+              <h4 class="box-title">Pengumuman</h4>
+
+              <div class="announcement-item">
+                <strong>Terbit : 15 Februari 2026</strong><br />
+                Pemberitahuan Pelaksanaan Pembelajaran Bulan Ramadan 1447 H
+              </div>
+
+              <div class="announcement-item mt-4">
+                <strong>Terbit : 21 Desember 2025</strong><br />
+                Libur Semester Gasal Tahun Ajaran 2025/2026
+              </div>
+
+              <div class="announcement-item mt-4">
+                <strong>Terbit : 24 Juni 2024</strong><br />
+                Edaran Libur Semester Tahun 2023/2024
+              </div>
+
+              <div class="announcement-item mt-4">
+                <strong>Terbit : 2 Mei 2024</strong><br />
+                Webinar Peringatan Hardiknas 2024
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container-fluid px-4">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center">
+            <h2 class="mb-4">Staff Pengajar SDN 01 Bungur</h2>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- FOTO KEPSEK -->
+          <div class="col-md-2">
+            <img src="images/person_1.jpg" class="img-fluid rounded h-100 w-100" style="object-fit: cover" />
+          </div>
+
+          <!-- SAMBUTAN -->
+          <div class="col-md-4">
+            <div class="p-4 rounded h-100" style="background: #001a8d; color: white">
+              <h3>
+                <strong style="color: white"> Eko Mulyadi, S.Si., M.Si. </strong>
+              </h3>
+
+              <p style="color: #ffd700">Kepala Sekolah</p>
+
+              <h4 class="mt-4">
+                <strong style="color: white"> SAMBUTAN KEPALA SEKOLAH </strong>
+              </h4>
+
+              <p class="mt-3">Assalamu’alaikum warahmatullahi wabarakatuh. Alhamdulillahirabbil ‘alamin...</p>
+
+              <div class="text-end mt-4">
+                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#sambutanModal">Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- OWL CAROUSEL GURU -->
+          <div class="col-md-6">
+            <div class="owl-carousel guru-carousel">
+              <div class="card border-0">
+                <img src="images/person_2.jpg" class="card-img-top" style="height: 300px; object-fit: cover" />
+                <div class="card-body text-center" style="background: #f7c52b">
+                  <p class="mb-1">Staff Tata Usaha</p>
+                  <h5>Dian Endra Gunawan</h5>
+                </div>
+              </div>
+
+              <div class="card border-0">
+                <img src="images/person_3.jpg" class="card-img-top" style="height: 300px; object-fit: cover" />
+                <div class="card-body text-center" style="background: #f7c52b">
+                  <p class="mb-1">Guru Kimia</p>
+                  <h5>Dina Rustiningsih</h5>
+                </div>
+              </div>
+
+              <div class="card border-0">
+                <img src="images/person_4.jpg" class="card-img-top" style="height: 300px; object-fit: cover" />
+                <div class="card-body text-center" style="background: #f7c52b">
+                  <p class="mb-1">Guru Matematika</p>
+                  <h5>Budi Santoso</h5>
+                </div>
+              </div>
+
+              <div class="card border-0">
+                <img src="images/person_5.jpg" class="card-img-top" style="height: 300px; object-fit: cover" />
+                <div class="card-body text-center" style="background: #f7c52b">
+                  <p class="mb-1">Guru Bahasa Indonesia</p>
+                  <h5>Siti Rahmawati</h5>
+                </div>
+              </div>
+
+              <div class="card border-0">
+                <img src="images/person_6.jpg" class="card-img-top" style="height: 300px; object-fit: cover" />
+                <div class="card-body text-center" style="background: #f7c52b">
+                  <p class="mb-1">Guru IPA</p>
+                  <h5>Nur Aisyah</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Our Experience Advisor</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-sm-4 ftco-animate">
+            <div class="staff">
+              <div class="d-flex mb-4">
+                <div class="img" style="background-image: url(images/person_1.jpg)"></div>
+                <div class="info ml-4">
+                  <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
+                  <span class="position">CSE Teacher</span>
+                  <p class="ftco-social d-flex">
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
+                  </p>
+                </div>
+              </div>
+              <div class="text">
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-sm-4 ftco-animate">
+            <div class="staff">
+              <div class="d-flex mb-4">
+                <div class="img" style="background-image: url(images/person_2.jpg)"></div>
+                <div class="info ml-4">
+                  <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
+                  <span class="position">CSE Teacher</span>
+                  <p class="ftco-social d-flex">
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
+                  </p>
+                </div>
+              </div>
+              <div class="text">
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-sm-4 ftco-animate">
+            <div class="staff">
+              <div class="d-flex mb-4">
+                <div class="img" style="background-image: url(images/person_3.jpg)"></div>
+                <div class="info ml-4">
+                  <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
+                  <span class="position">CSE Teacher</span>
+                  <p class="ftco-social d-flex">
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
+                    <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
+                  </p>
+                </div>
+              </div>
+              <div class="text">
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="ftco-freeTrial">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="d-flex align-items-center">
+              <div class="free-trial ftco-animate">
+                <h3>Education is the key to unlock a brighter future</h3>
+              </div>
+              <div class="btn-join ftco-animate">
+                <p><a href="#" class="btn btn-primary py-3 px-4">Contact Us</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section" id="gallery">
+      <div class="container">
+        <!-- Heading -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center">
+            <h2 class="mb-3">Gallery SDN Bungur 01</h2>
+            <p>Dokumentasi kegiatan, ekstrakurikuler, dan lingkungan sekolah</p>
+          </div>
+        </div>
+
+        <!-- Filter Button -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-12 text-center">
+            <button class="filter-btn active" onclick="filterGallery('all')">Semua</button>
+            <button class="filter-btn" onclick="filterGallery('ekskul')">Ekskul</button>
+            <button class="filter-btn" onclick="filterGallery('acara')">Acara</button>
+            <button class="filter-btn" onclick="filterGallery('lingkungan')">Lingkungan Sekolah</button>
+          </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-4" id="galleryGrid">
+          <div class="col-md-4 gallery-item ekskul mb-4 px-3">
+            <img src="images/event-1.jpg" class="img-fluid rounded shadow-sm" />
+          </div>
+
+          <div class="col-md-4 gallery-item acara mb-4 px-3">
+            <img src="images/event-2.jpg" class="img-fluid rounded shadow-sm" />
+          </div>
+
+          <div class="col-md-4 gallery-item lingkungan mb-4 px-3">
+            <img src="images/event-3.jpg" class="img-fluid rounded shadow-sm" />
+          </div>
+
+          <div class="col-md-4 gallery-item ekskul mb-4 px-3">
+            <img src="images/event-4.jpg" class="img-fluid rounded shadow-sm" />
+          </div>
+
+          <div class="col-md-4 gallery-item acara mb-4 px-3">
+            <img src="images/event-5.jpg" class="img-fluid rounded shadow-sm" />
+          </div>
+
+          <div class="col-md-4 gallery-item lingkungan mb-4 px-3">
+            <img src="images/event-6.jpg" class="img-fluid rounded shadow-sm" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center">
+            <h2 class="mb-4">Prestasi Siswa & Sekolah</h2>
+          </div>
+        </div>
+
+        <div class="owl-carousel prestasi-slider">
+          <!-- Card 1 -->
+          <div class="item">
+            <div class="prestasi-card">
+              <img src="images/person_1.jpg" class="prestasi-img" alt="" />
+              <div class="prestasi-content">
+                <p><strong>Peraih :</strong> Dua Siswa Delayota</p>
+                <h4 class="prestasi-title">Dua Siswa Delayota Sabet Juara Solo Vokal FLS2N Tingkat SMA</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="item">
+            <div class="prestasi-card">
+              <img src="images/person_2.jpg" class="prestasi-img" alt="" />
+              <div class="prestasi-content">
+                <p><strong>Peraih :</strong> Tim Olimpiade</p>
+                <h4 class="prestasi-title">Siswa Raih Medali Emas Kompetisi Nasional</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="item">
+            <div class="prestasi-card">
+              <img src="images/person_3.jpg" class="prestasi-img" alt="" />
+              <div class="prestasi-content">
+                <p><strong>Peraih :</strong> Juara 1</p>
+                <h4 class="prestasi-title">Juara 1 Lomba Cerdas Cermat Tingkat Provinsi</h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="prestasi-card">
+              <img src="images/person_4.jpg" class="prestasi-img" alt="" />
+              <div class="prestasi-content">
+                <p><strong>Peraih :</strong> Juara 1</p>
+                <h4 class="prestasi-title">Juara 1 Lomba Cerdas Cermat Tingkat Provinsi</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center">
+            <h2 class="mb-4">Mading Sekolah</h2>
+          </div>
+        </div>
+
+        <div class="owl-carousel mading-slider">
+          <!-- Slide 1 -->
+          <div class="item">
+            <div class="mading-card">
+              <img src="images/event-1.jpg" class="mading-img" alt="Mading 1" />
+              <div class="mading-overlay">
+                <span class="mading-date">10 September 2025</span>
+                <h3 style="color: white">Pengumuman Lomba Antar Kelas</h3>
+                <p>Ikuti lomba kreativitas siswa dan raih hadiah menarik.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="item">
+            <div class="mading-card">
+              <img src="images/event-2.jpg" class="mading-img" alt="Mading 2" />
+              <div class="mading-overlay">
+                <span class="mading-date">12 September 2025</span>
+                <h3 style="color: white">Jadwal Ujian Tengah Semester</h3>
+                <p>Perhatikan jadwal pelaksanaan UTS minggu depan.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="item">
+            <div class="mading-card">
+              <img src="images/event-3.jpg" class="mading-img" alt="Mading 3" />
+              <div class="mading-overlay">
+                <span class="mading-date">15 September 2025</span>
+                <h3 style="color: white">Kegiatan Class Meeting</h3>
+                <p>Berbagai lomba dan kegiatan seru untuk seluruh siswa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section-parallax">
+      <div class="parallax-map d-flex align-items-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-10 text-center heading-section heading-section-white">
+              <h2 class="mb-4">Lokasi SDN Bungur 01</h2>
+              <p>Jl. Angsana No. 4, Kel. Bungur, Kec. Senen, Jakarta Pusat</p>
+              <a href="https://maps.google.com/?q=-6.1708,106.8505" target="_blank" class="btn btn-light mt-3 px-4 py-2"> Lihat di Google Maps </a>
+
+              <div class="map-card mt-5">
+                <iframe src="https://www.google.com/maps?q=-6.1708,106.8505&hl=id&z=17&output=embed" width="100%" height="420" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer custom-footer img" style="background-image: url(images/bungur-pics/22.jpeg); background-attachment: fixed">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <!-- Logo + Deskripsi -->
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo-bungur.png" alt="Logo SDN Bungur 01" style="height: 120px; width: 120px" />
+              </a>
+
+              <h4 class="mt-3 text-white">SDN Bungur 01</h4>
+
+              <p>Membangun generasi yang cerdas, berkarakter, berprestasi, dan siap menghadapi masa depan melalui pendidikan yang berkualitas.</p>
+
+              <ul class="ftco-footer-social list-unstyled mt-4 d-flex">
+                <li class="mr-3">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+                <li class="mr-3">
+                  <a href=" @sdnbungur01"><span class="icon-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-youtube"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Menu Navigasi</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Profil</a></li>
+                <li><a href="course.html">Pengumuman</a></li>
+                <li><a href="teacher.html">Staff</a></li>
+                <li><a href="blog.html">Prestasi</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Kontak -->
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Kontak Sekolah</h2>
+              <div class="block-23">
+                <ul>
+                  <li>
+                    <span class="icon icon-map-marker"></span>
+                    <span class="text"> Jl. Angsana No. 4, Bungur, Senen, Jakarta Pusat </span>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span class="icon icon-phone"></span>
+                      <span class="text">(021) 4223710 </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span class="icon icon-envelope"></span>
+                      <span class="text">sdnbungur01@gmail.com </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              SDN Bungur 01. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+      </svg>
+    </div>
+
+    <div class="modal fade" id="sambutanModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sambutan Kepala Sekolah</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <h4>Eko Mulyadi, S.Si., M.Si.</h4>
+            <p><strong>Kepala Sekolah</strong></p>
+
+            <p>Assalamu’alaikum warahmatullahi wabarakatuh.</p>
+
+            <p>Alhamdulillahirabbil ‘alamin, puji syukur kita panjatkan ke hadirat Allah SWT atas segala limpahan rahmat dan karunia-Nya.</p>
+
+            <p>Selamat datang di website resmi sekolah kami. Website ini kami hadirkan sebagai media informasi, komunikasi, dan sarana untuk mempererat hubungan antara sekolah, siswa, guru, orang tua, serta masyarakat.</p>
+
+            <p>Semoga website ini dapat memberikan manfaat dan menjadi sumber informasi yang terpercaya bagi seluruh warga sekolah.</p>
+
+            <p>Wassalamu’alaikum warahmatullahi wabarakatuh.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.guru-carousel').owlCarousel({
+          loop: true,
+          margin: 15,
+          nav: false,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: {
+              items: 2,
+            },
+            1200: {
+              items: 2,
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      function filterGallery(category) {
+        let items = document.querySelectorAll('.gallery-item');
+        let buttons = document.querySelectorAll('.filter-btn');
+
+        buttons.forEach((btn) => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        items.forEach((item) => {
+          if (category === 'all') {
+            item.style.display = 'block';
+          } else {
+            item.style.display = item.classList.contains(category) ? 'block' : 'none';
+          }
+        });
+      }
+    </script>
+    <script>
+      $('.prestasi-slider').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 2000, // 2 detik
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          992: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+    <script>
+      $('.mading-slider').owlCarousel({
+        loop: true,
+        items: 1,
+        margin: 20,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000, // 3 detik
+        autoplayHoverPause: true,
+        smartSpeed: 1000,
+      });
+    </script>
+  </body>
+</html>
