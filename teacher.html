@@ -134,6 +134,39 @@
         font-weight: 500;
         margin-bottom: 0;
       }
+      .dropdown-menu {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .dropdown-item {
+        padding: 10px 20px;
+        font-weight: 500;
+      }
+
+      .dropdown-item:hover {
+        background: #001a8d;
+        color: white;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .navbar-toggler {
+        border: none;
+        color: white !important;
+        font-size: 20px;
+      }
+      @media (max-width: 991px) {
+        .dropdown:hover .dropdown-menu {
+          display: none;
+        }
+
+        .dropdown-menu.show {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
@@ -142,14 +175,25 @@
         <a class="navbar-brand" href="index.html">
           <img src="images/logo-bungur.png" alt="Logo" style="height: 100px; width: 100px" />
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">Profil</a></li>
-            <li class="nav-item"><a href="course.html" class="nav-link">Pengumuman</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="kurikulumDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Kurikulum </a>
+
+              <div class="dropdown-menu" aria-labelledby="kurikulumDropdown">
+                <a class="dropdown-item" href="g7kaih.html"> G7KAIH </a>
+                <a class="dropdown-item" href="intrakurikuler.html"> Intrakurikuler </a>
+                <a class="dropdown-item" href="ekstrakurikuler.html"> Ekstrakurikuler </a>
+                <a class="dropdown-item" href="kokurikuler.html"> Kokurikuler </a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="pengumuman.html" class="nav-link">Pengumuman</a></li>
+            <li class="nav-item"><a href="prestasi.html" class="nav-link">Prestasi</a></li>
             <li class="nav-item active"><a href="teacher.html" class="nav-link">Staff</a></li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Prestasi</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </div>
@@ -320,9 +364,9 @@
               <ul class="list-unstyled">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">Profil</a></li>
-                <li><a href="course.html">Pengumuman</a></li>
+                <li><a href="pengumuman.html">Pengumuman</a></li>
                 <li><a href="teacher.html">Staff</a></li>
-                <li><a href="blog.html">Prestasi</a></li>
+                <li><a href="prestasi.html">Prestasi</a></li>
                 <li><a href="contact.html">Kontak</a></li>
               </ul>
             </div>

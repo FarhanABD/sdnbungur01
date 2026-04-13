@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SDN 01 Bungur</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .video-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        margin: 10px;
+      }
+
+      .video-card video {
+        width: 100%;
+        height: 260px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      .video-card h5 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .custom-footer {
+        position: relative;
+        color: #fff;
+      }
+
+      .custom-footer .overlay {
+        background: rgba(0, 0, 0, 0.75);
+      }
+
+      .custom-footer a {
+        color: #ffffff;
+        transition: 0.3s;
+      }
+
+      .custom-footer a:hover {
+        color: #ffd700;
+        text-decoration: none;
+      }
+
+      .custom-footer .ftco-heading-2 {
+        color: #ffd700;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .custom-footer ul li {
+        margin-bottom: 12px;
+      }
+
+      .custom-footer .ftco-footer-social a {
+        font-size: 20px;
+      }
+      .teacher-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 6px;
+      }
+
+      .teacher-nip {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 6px;
+        line-height: 1.4;
+      }
+
+      .teacher-role {
+        color: #001a8d;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .filter-btn {
+        border: none;
+        background: #f1f1f1;
+        padding: 10px 18px;
+        margin: 5px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: #001a8d;
+        color: white;
+      }
+
+      .page-btn {
+        border: none;
+        padding: 8px 14px;
+        margin: 5px;
+        border-radius: 8px;
+        background: #eee;
+        cursor: pointer;
+      }
+
+      .page-btn.active {
+        background: #001a8d;
+        color: white;
+      }
+      .teacher-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 15px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .teacher-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+      }
+
+      .teacher-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 14px;
+        display: block;
+        margin-bottom: 18px;
+      }
+
+      .teacher-role {
+        color: #001a8d;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      .dropdown-menu {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .dropdown-item {
+        padding: 10px 20px;
+        font-weight: 500;
+      }
+
+      .dropdown-item:hover {
+        background: #001a8d;
+        color: white;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .navbar-toggler {
+        border: none;
+        color: white !important;
+        font-size: 20px;
+      }
+      .teacher-card {
+        overflow: hidden;
+      }
+
+      .teacher-img {
+        transition: transform 0.4s ease;
+      }
+
+      .teacher-card:hover .teacher-img {
+        transform: scale(1.05);
+      }
+      @media (max-width: 991px) {
+        .dropdown:hover .dropdown-menu {
+          display: none;
+        }
+
+        .dropdown-menu.show {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo-bungur.png" alt="Logo" style="height: 100px; width: 100px" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">Profil</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="kurikulumDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Kurikulum </a>
+
+              <div class="dropdown-menu" aria-labelledby="kurikulumDropdown">
+                <a class="dropdown-item" href="g7kaih.html"> G7KAIH </a>
+                <a class="dropdown-item" href="intrakurikuler.html"> Intrakurikuler </a>
+                <a class="dropdown-item active" href="ekstrakurikuler.html"> Ekstrakurikuler </a>
+                <a class="dropdown-item" href="kokurikuler.html"> Kokurikuler </a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="pengumuman.html" class="nav-link">Pengumuman</a></li>
+            <li class="nav-item"><a href="prestasi.html" class="nav-link">Prestasi</a></li>
+            <li class="nav-item"><a href="teacher.html" class="nav-link">Staff</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bungur-pics/1.jpeg'); background-attachment: fixed">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 ftco-animate text-center">
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="index.html">Kurikulum</a></span> <span>Ekstrakurikuler</span>
+            </p>
+            <h1 class="mb-3 bread">Ekstrakurikuler SDN 01 Bungur</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section bg-light" id="teachers">
+      <div class="container">
+        <!-- Heading -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center">
+            <h2 class="mb-3">Ekstrakurikuler SDN 01 Bungur Jakarta</h2>
+            <p>Program Kegiatan ekstrakurikuler SDN 01 Bungur Jakarta</p>
+          </div>
+        </div>
+
+        <!-- Filter -->
+        <div class="row mb-4">
+          <div class="col-md-12 text-center">
+            <button class="filter-btn active" onclick="filterTeachers('all', event)">Semua</button>
+            <button class="filter-btn" onclick="filterTeachers('pramuka', event)">Pramuka</button>
+            <button class="filter-btn" onclick="filterTeachers('bta', event)">BTA</button>
+            <button class="filter-btn" onclick="filterTeachers('olahraga', event)">Olahraga</button>
+            <button class="filter-btn" onclick="filterTeachers('seni', event)">Seni Budaya</button>
+          </div>
+        </div>
+        <!-- Teacher Cards -->
+        <!-- Ekstrakurikuler Cards -->
+        <div class="row" id="teacherContainer">
+          <!-- PRAMUKA -->
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item pramuka">
+            <div class="teacher-card text-center">
+              <img src="images/ekskul/ekskul-13.jpeg" class="teacher-img" />
+              <h5 class="teacher-name">Pramuka</h5>
+              <p class="teacher-nip">Kegiatan wajib pengembangan karakter</p>
+              <p class="teacher-role">Kategori: Pramuka</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item pramuka">
+            <div class="teacher-card text-center">
+              <img src="images/ekskul/ekskul-15.jpeg" class="teacher-img" />
+              <h5 class="teacher-name">Pramuka Penggalang</h5>
+              <p class="teacher-nip">Latihan rutin setiap Jumat</p>
+              <p class="teacher-role">Kategori: Pramuka</p>
+            </div>
+          </div>
+
+          <!-- BTA -->
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item bta">
+            <div class="teacher-card text-center">
+              <img src="images/bungur-pics/bta.jpg" class="teacher-img" />
+              <h5 class="teacher-name">BTA</h5>
+              <p class="teacher-nip">Baca Tulis Al-Qur'an</p>
+              <p class="teacher-role">Kategori: BTA</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item bta">
+            <div class="teacher-card text-center">
+              <img src="images/bungur-pics/bta.jpg" class="teacher-img" />
+              <h5 class="teacher-name">Tahfidz Dasar</h5>
+              <p class="teacher-nip">Pembelajaran hafalan surat pendek</p>
+              <p class="teacher-role">Kategori: BTA</p>
+            </div>
+          </div>
+
+          <!-- OLAHRAGA -->
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item olahraga">
+            <div class="teacher-card text-center">
+              <img src="images/ekskul/ekskul-2.jpeg" class="teacher-img" />
+              <h5 class="teacher-name">Futsal</h5>
+              <p class="teacher-nip">Latihan teknik dan teamwork</p>
+              <p class="teacher-role">Kategori: Olahraga</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item olahraga">
+            <div class="teacher-card text-center">
+              <img src="images/ekskul/ekskul-6.jpeg" class="teacher-img" />
+              <h5 class="teacher-name">Karate</h5>
+              <p class="teacher-nip">Melatih disiplin dan bela diri</p>
+              <p class="teacher-role">Kategori: Olahraga</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item olahraga">
+            <div class="teacher-card text-center">
+              <img src="images/ekskul/ekskul-9.jpeg" class="teacher-img" />
+              <h5 class="teacher-name">Pencak Silat</h5>
+              <p class="teacher-nip">Seni bela diri tradisional</p>
+              <p class="teacher-role">Kategori: Olahraga</p>
+            </div>
+          </div>
+
+          <!-- SENI BUDAYA -->
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item seni">
+            <div class="teacher-card text-center">
+              <img src="images/ekskul/ekskul-14.jpeg" class="teacher-img" />
+              <h5 class="teacher-name">Seni Tari</h5>
+              <p class="teacher-nip">Pengembangan bakat seni gerak</p>
+              <p class="teacher-role">Kategori: Seni Budaya</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item seni">
+            <div class="teacher-card text-center">
+              <img src="images/ekskul/ekskul-18 (1).jpeg" class="teacher-img" />
+              <h5 class="teacher-name">Seni Musik</h5>
+              <p class="teacher-nip">Belajar alat musik dan vokal</p>
+              <p class="teacher-role">Kategori: Seni Budaya</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 mb-4 teacher-item seni">
+            <div class="teacher-card text-center">
+              <img src="images/ekskul/ekskul-10.jpeg" class="teacher-img" />
+              <h5 class="teacher-name">Seni Lukis</h5>
+              <p class="teacher-nip">Mengembangkan kreativitas visual</p>
+              <p class="teacher-role">Kategori: Seni Budaya</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="row mt-4">
+          <div class="col text-center">
+            <div id="pagination"></div>
+          </div>
+        </div>
+        <!-- Video Kegiatan Siswa -->
+        <div class="row mt-5">
+          <div class="col-md-12 text-center mb-4">
+            <h3>Video Kegiatan Siswa</h3>
+            <p>Dokumentasi kegiatan ekstrakurikuler siswa SDN 01 Bungur</p>
+          </div>
+
+          <div class="col-md-12">
+            <div class="owl-carousel video-carousel">
+              <div class="video-card">
+                <video controls preload="metadata">
+                  <source src="images/ekskul/ekskul-19.mp4" type="video/mp4" />
+                  Browser Anda tidak mendukung video.
+                </video>
+                <h5 class="mt-3">Kegiatan Ekstrakurikuler Musik</h5>
+              </div>
+
+              <div class="video-card">
+                <video controls preload="metadata">
+                  <source src="images/ekskul/ekskul-20.mp4" type="video/mp4" />
+                  Browser Anda tidak mendukung video.
+                </video>
+                <h5 class="mt-3">Kegiatan Ekstrakurikuler Musik</h5>
+              </div>
+
+              <div class="video-card">
+                <video controls preload="metadata">
+                  <source src="images/ekskul/ekskul-21.mp4" type="video/mp4" />
+                  Browser Anda tidak mendukung video.
+                </video>
+                <h5 class="mt-3">Kegiatan Ekstrakurikuler Musik</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8 text-center heading-section heading-section-white ftco-animate">
+              <h2>Penerimaan Peserta Didik Baru (PPDB)</h2>
+              <p>Pendaftaran siswa baru SDN 01 Bungur telah dibuka. Mari bergabung bersama sekolah yang unggul, berprestasi, dan berkarakter.</p>
+
+              <div class="mt-4">
+                <a href="contact.html" class="btn btn-warning px-4 py-3"> Daftar Sekarang </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer custom-footer img" style="background-image: url(images/bungur-pics/22.jpeg); background-attachment: fixed">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <!-- Logo + Deskripsi -->
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo-bungur.png" alt="Logo SDN Bungur 01" style="height: 120px; width: 120px" />
+              </a>
+
+              <h4 class="mt-3 text-white">SDN Bungur 01</h4>
+
+              <p>Membangun generasi yang cerdas, berkarakter, berprestasi, dan siap menghadapi masa depan melalui pendidikan yang berkualitas.</p>
+
+              <ul class="ftco-footer-social list-unstyled mt-4 d-flex">
+                <li class="mr-3">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+                <li class="mr-3">
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-youtube"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Menu Navigasi</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Profil</a></li>
+                <li><a href="pengumuman.html">Pengumuman</a></li>
+                <li><a href="teacher.html">Staff</a></li>
+                <li><a href="prestasi.html">Prestasi</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Kontak -->
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Kontak Sekolah</h2>
+              <div class="block-23">
+                <ul>
+                  <li>
+                    <span class="icon icon-map-marker"></span>
+                    <span class="text"> Jl. Angsana No. 4, Bungur, Senen, Jakarta Pusat </span>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span class="icon icon-phone"></span>
+                      <span class="text">(021) 4223710 </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span class="icon icon-envelope"></span>
+                      <span class="text">sdnbungur01@gmail.com </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              SDN Bungur 01. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+      </svg>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      let currentCategory = 'all';
+      let currentPage = 1;
+      const itemsPerPage = 6;
+
+      function filterTeachers(category) {
+        currentCategory = category;
+        currentPage = 1;
+
+        document.querySelectorAll('.filter-btn').forEach((btn) => {
+          btn.classList.remove('active');
+        });
+
+        event.target.classList.add('active');
+
+        renderTeachers();
+      }
+
+      function renderTeachers() {
+        let items = document.querySelectorAll('.teacher-item');
+
+        let filtered = Array.from(items).filter((item) => {
+          return currentCategory === 'all' || item.classList.contains(currentCategory);
+        });
+
+        items.forEach((item) => (item.style.display = 'none'));
+
+        let start = (currentPage - 1) * itemsPerPage;
+        let end = start + itemsPerPage;
+
+        filtered.slice(start, end).forEach((item) => {
+          item.style.display = 'block';
+        });
+
+        renderPagination(filtered.length);
+      }
+
+      function renderPagination(totalItems) {
+        let totalPages = Math.ceil(totalItems / itemsPerPage);
+        let pagination = document.getElementById('pagination');
+
+        pagination.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+          pagination.innerHTML += `
+            <button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">
+                ${i}
+            </button>
+        `;
+        }
+      }
+
+      function goToPage(page) {
+        currentPage = page;
+        renderTeachers();
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        renderTeachers();
+      });
+      $(document).ready(function () {
+        $('.video-carousel').owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          dots: true,
+          autoplay: false,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: {
+              items: 2,
+            },
+            1200: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

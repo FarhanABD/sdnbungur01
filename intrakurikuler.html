@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SDN 01 Bungur</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .carousel-card {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        min-height: 560px; /* tinggi total card */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .carousel-card img {
+        width: 100%;
+        height: 480px; /* bikin gambar lebih tinggi */
+        object-fit: contain; /* biar tidak kepotong */
+        background: #f8f9fa;
+      }
+
+      .carousel-caption-custom {
+        padding: 20px;
+        text-align: center;
+        flex: 1;
+      }
+
+      .intrakurikuler-carousel .owl-stage-outer {
+        overflow: visible !important;
+      }
+
+      .carousel-caption-custom h5 {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .carousel-caption-custom p {
+        margin-bottom: 0;
+        color: #666;
+      }
+      #intrakurikuler .teacher-card {
+        border-left: 6px solid #001a8d;
+        border-radius: 18px;
+        background: #fff;
+      }
+      .custom-footer {
+        position: relative;
+        color: #fff;
+      }
+
+      .custom-footer .overlay {
+        background: rgba(0, 0, 0, 0.75);
+      }
+
+      .custom-footer a {
+        color: #ffffff;
+        transition: 0.3s;
+      }
+
+      .custom-footer a:hover {
+        color: #ffd700;
+        text-decoration: none;
+      }
+
+      .custom-footer .ftco-heading-2 {
+        color: #ffd700;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .custom-footer ul li {
+        margin-bottom: 12px;
+      }
+
+      .custom-footer .ftco-footer-social a {
+        font-size: 20px;
+      }
+      .teacher-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 6px;
+      }
+
+      .teacher-nip {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 6px;
+        line-height: 1.4;
+      }
+
+      .teacher-role {
+        color: #001a8d;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .filter-btn {
+        border: none;
+        background: #f1f1f1;
+        padding: 10px 18px;
+        margin: 5px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: #001a8d;
+        color: white;
+      }
+
+      .page-btn {
+        border: none;
+        padding: 8px 14px;
+        margin: 5px;
+        border-radius: 8px;
+        background: #eee;
+        cursor: pointer;
+      }
+
+      .page-btn.active {
+        background: #001a8d;
+        color: white;
+      }
+      .teacher-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 30px 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .teacher-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+      }
+
+      .teacher-img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
+        border: 5px solid #f5f5f5;
+      }
+
+      .teacher-role {
+        color: #001a8d;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      .dropdown-menu {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .dropdown-item {
+        padding: 10px 20px;
+        font-weight: 500;
+      }
+
+      .dropdown-item:hover {
+        background: #001a8d;
+        color: white;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .navbar-toggler {
+        border: none;
+        color: white !important;
+        font-size: 20px;
+      }
+      @media (max-width: 991px) {
+        .dropdown:hover .dropdown-menu {
+          display: none;
+        }
+
+        .dropdown-menu.show {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo-bungur.png" alt="Logo" style="height: 100px; width: 100px" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">Profil</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="kurikulumDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Kurikulum </a>
+
+              <div class="dropdown-menu" aria-labelledby="kurikulumDropdown">
+                <a class="dropdown-item" href="g7kaih.html"> G7KAIH </a>
+                <a class="dropdown-item active" href="intrakurikuler.html"> Intrakurikuler </a>
+                <a class="dropdown-item" href="ekstrakurikuler.html"> Ekstrakurikuler </a>
+                <a class="dropdown-item" href="kokurikuler.html"> Kokurikuler </a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="pengumuman.html" class="nav-link">Pengumuman</a></li>
+            <li class="nav-item"><a href="prestasi.html" class="nav-link">Prestasi</a></li>
+            <li class="nav-item"><a href="teacher.html" class="nav-link">Staff</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bungur-pics/1.jpeg'); background-attachment: fixed">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 ftco-animate text-center">
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="index.html">Kurikulum</a></span> <span>Intrakurikuler</span>
+            </p>
+            <h1 class="mb-3 bread">Intrakurikuler SDN 01 Bungur</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section bg-light" id="intrakurikuler">
+      <div class="container">
+        <!-- Heading -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-10 text-center">
+            <h2 class="mb-3">Intrakurikuler SDN 01 Bungur</h2>
+            <p>Kegiatan inti pembelajaran yang wajib diikuti seluruh peserta didik</p>
+          </div>
+        </div>
+
+        <!-- Card Deskripsi -->
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="teacher-card p-4">
+              <h4 class="mb-4">Pengertian Intrakurikuler</h4>
+
+              <p style="line-height: 1.9; color: #555">
+                Intrakurikuler adalah kegiatan inti pembelajaran yang wajib dilaksanakan oleh sekolah dan menjadi bagian dari struktur kurikulum nasional. Kegiatan ini dilaksanakan secara terjadwal, sistematis, dan terstruktur dalam jam
+                pelajaran resmi sekolah.
+              </p>
+
+              <hr />
+
+              <h5 class="mt-4 mb-3">Tujuan Intrakurikuler</h5>
+              <ul style="line-height: 2; color: #555">
+                <li>Mengembangkan kompetensi dasar dan inti peserta didik sesuai kurikulum</li>
+                <li>Membentuk pengetahuan, keterampilan, sikap, dan karakter siswa secara menyeluruh</li>
+                <li>Mempersiapkan peserta didik menghadapi tantangan akademik dan kehidupan sehari-hari</li>
+              </ul>
+
+              <h5 class="mt-4 mb-3">Ciri-ciri Intrakurikuler</h5>
+              <ul style="line-height: 2; color: #555">
+                <li>Wajib diikuti semua siswa</li>
+                <li>Dilaksanakan di dalam jam pelajaran resmi</li>
+                <li>Berisi materi pokok kurikulum seperti Bahasa Indonesia, Matematika, PPKn, IPA, dan lainnya</li>
+                <li>Diajarkan oleh guru kelas atau guru mata pelajaran</li>
+                <li>Ditetapkan dalam struktur kurikulum nasional (Kurikulum Merdeka atau sebelumnya)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="owl-carousel intrakurikuler-carousel">
+            <div class="carousel-card">
+              <img src="images/bungur-pics/intra-1.jpeg" alt="Kegiatan belajar 1" />
+              <div class="carousel-caption-custom">
+                <h5>Struktur Kurikulum Merdeka SDN Bungur 01</h5>
+                <p>Struktur kurikulum Kelas II</p>
+              </div>
+            </div>
+
+            <div class="carousel-card">
+              <img src="images/bungur-pics/intra-2.jpeg" alt="Kegiatan belajar 2" />
+              <div class="carousel-caption-custom">
+                <h5>Struktur Kurikulum Merdeka SDN Bungur 01</h5>
+                <p>Struktur kurikulum Kelas III - IV</p>
+              </div>
+            </div>
+
+            <div class="carousel-card">
+              <img src="images/bungur-pics/intra-3.jpeg" alt="Kegiatan belajar 3" />
+              <div class="carousel-caption-custom">
+                <h5>Struktur Kurikulum Merdeka SDN Bungur 01</h5>
+                <p>Struktur kurikulum Kelas V - VI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8 text-center heading-section heading-section-white ftco-animate">
+              <h2>Penerimaan Peserta Didik Baru (PPDB)</h2>
+              <p>Pendaftaran siswa baru SDN 01 Bungur telah dibuka. Mari bergabung bersama sekolah yang unggul, berprestasi, dan berkarakter.</p>
+
+              <div class="mt-4">
+                <a href="contact.html" class="btn btn-warning px-4 py-3"> Daftar Sekarang </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer custom-footer img" style="background-image: url(images/bungur-pics/22.jpeg); background-attachment: fixed">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <!-- Logo + Deskripsi -->
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo-bungur.png" alt="Logo SDN Bungur 01" style="height: 120px; width: 120px" />
+              </a>
+
+              <h4 class="mt-3 text-white">SDN Bungur 01</h4>
+
+              <p>Membangun generasi yang cerdas, berkarakter, berprestasi, dan siap menghadapi masa depan melalui pendidikan yang berkualitas.</p>
+
+              <ul class="ftco-footer-social list-unstyled mt-4 d-flex">
+                <li class="mr-3">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+                <li class="mr-3">
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-youtube"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Menu Navigasi</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Profil</a></li>
+                <li><a href="pengumuman.html">Pengumuman</a></li>
+                <li><a href="teacher.html">Staff</a></li>
+                <li><a href="prestasi.html">Prestasi</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Kontak -->
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Kontak Sekolah</h2>
+              <div class="block-23">
+                <ul>
+                  <li>
+                    <span class="icon icon-map-marker"></span>
+                    <span class="text"> Jl. Angsana No. 4, Bungur, Senen, Jakarta Pusat </span>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span class="icon icon-phone"></span>
+                      <span class="text">(021) 4223710 </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span class="icon icon-envelope"></span>
+                      <span class="text">sdnbungur01@gmail.com </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              SDN Bungur 01. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+      </svg>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.intrakurikuler-carousel').owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          smartSpeed: 800,
+          navText: ["<span class='oi oi-chevron-left'></span>", "<span class='oi oi-chevron-right'></span>"],
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: {
+              items: 1,
+            },
+            1200: {
+              items: 1,
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      let currentCategory = 'all';
+      let currentPage = 1;
+      const itemsPerPage = 6;
+
+      function filterTeachers(category) {
+        currentCategory = category;
+        currentPage = 1;
+
+        document.querySelectorAll('.filter-btn').forEach((btn) => {
+          btn.classList.remove('active');
+        });
+
+        event.target.classList.add('active');
+
+        renderTeachers();
+      }
+
+      function renderTeachers() {
+        let items = document.querySelectorAll('.teacher-item');
+
+        let filtered = Array.from(items).filter((item) => {
+          return currentCategory === 'all' || item.classList.contains(currentCategory);
+        });
+
+        items.forEach((item) => (item.style.display = 'none'));
+
+        let start = (currentPage - 1) * itemsPerPage;
+        let end = start + itemsPerPage;
+
+        filtered.slice(start, end).forEach((item) => {
+          item.style.display = 'block';
+        });
+
+        renderPagination(filtered.length);
+      }
+
+      function renderPagination(totalItems) {
+        let totalPages = Math.ceil(totalItems / itemsPerPage);
+        let pagination = document.getElementById('pagination');
+
+        pagination.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+          pagination.innerHTML += `
+            <button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">
+                ${i}
+            </button>
+        `;
+        }
+      }
+
+      function goToPage(page) {
+        currentPage = page;
+        renderTeachers();
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        renderTeachers();
+      });
+    </script>
+  </body>
+</html>
